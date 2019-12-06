@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>API | Documentacion</title>  
+  </head>
+  <body class="d-flex flex-column h-100">
+    <!-- Begin page content -->
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+      <h5 class="my-0 mr-md-auto font-weight-normal">Georuta</h5>
+      <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-2 text-dark" href="#">Documentación</a>
+        <a class="p-2 text-dark" href="#">Caracteristicas</a>
+        <a class="p-2 text-dark" href="#">Soporte</a>
+        <a class="p-2 text-dark" href="#">Acerca de</a>
+      </nav>
+      <a class="btn btn-outline-primary" href="#">Sign up</a>
+    </div>    
+<!--     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">Georuta</a>
+      </div> -->
+    </nav>    
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        <h3 class="mt-5">Bienvenido al API REST de Georuta, version: {{version}}</h3>
+        <p class="lead text-muted">Plantilla gien construccion...</p>
+      </div>
+    </main>
+    <!-- built files will be auto injected -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+    <script>
+    // var socket = io.connect('ws://192.168.0.12:3001', { transports: ['websocket'] });
+    var socket = io.connect('http://192.168.1.14:3001');
+    // var socket = io.connect('http://localhost:3001');
+    socket.on('news', function (data) {
+      console.log(data);
+    });
+  </script> 
+  </body>
+</html>
